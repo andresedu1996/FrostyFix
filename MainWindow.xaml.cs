@@ -38,7 +38,7 @@ namespace FrostyFix2 {
                     lbl_enabled.Text = "Mods are Currently Enabled for Mass Effect: Andromeda";
                 }
                 else if (isenabled == bf1 + "\\ModData") {
-                    lbl_enabled.Text = "Mods are Currently Enabled for Battlefield One";
+                    lbl_enabled.Text = "Mods are Currently Enabled for FIFA 20";
                 }
                 else if (isenabled == nfs + "\\ModData") {
                     lbl_enabled.Text = "Mods are Currently Enabled for Need for Speed";
@@ -108,7 +108,7 @@ namespace FrostyFix2 {
                     rbtn_bf2017.Foreground = new SolidColorBrush(Color.FromArgb(255, 140, 140, 140));
                 }
 
-            using (RegistryKey bf1key = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\WOW6432Node\EA Games\Battlefield 1"))
+            using (RegistryKey bf1key = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\WOW6432Node\EA Games\FIFA 20"))
                 if (bf1key != null) {
                     bf1 = (string)bf1key.GetValue("Install Dir");
                     rbtn_bf1.IsEnabled = true;
